@@ -15,6 +15,12 @@ export default defineConfig({
   // This changes the out put dir from dist to build
   // comment this out if that isn't relevant for your project
   build: {
+    rollupOptions: {
+      external: [
+        "react", // ignore react stuff
+        "react-dom",
+      ],
+    },
     outDir: "build",
   },
   plugins: [
@@ -26,4 +32,10 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    alias: { 
+      'components': '/src/components',
+      'constant': '/src/constant'
+    }
+  }
 });
