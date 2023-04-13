@@ -3,7 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import Test from 'components/aa/Test';
 
+
 function App() {
+  const env = import.meta.env.VITE_BASE_URL
+  console.log('env: ', env)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +24,7 @@ function App() {
           Learn React
         </a>
       </header>
-      
+
       <Test />
     </div>
   );
