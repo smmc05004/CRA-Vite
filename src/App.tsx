@@ -7,6 +7,11 @@ import Test from 'components/aa/Test';
 function App() {
   const env = import.meta.env.VITE_BASE_URL
   console.log('env: ', env)
+  
+  // npm run start -> development
+  // npm run build -> npm run serve -> production
+  const mode = import.meta.env.MODE
+  console.log('mode: ', mode)
 
   return (
     <div className="App">
